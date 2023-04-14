@@ -7,24 +7,24 @@ import { Training } from '../model/training.model';
 
 export class CartService {
   
-training: Training[] = [];
+items: Training[] = [];
  
-  addTraining(training: Training) {
+  addToCart(training: Training) {
   
-    this.training.push(training); // Les formations sont stockées dans le LocalStorage (service)
+    this.items.push(training); // Les formations sont stockées dans le LocalStorage (service)
     window.alert('Vous avez ajouté une formation au panier.')
   }
   // Méthode qui va récupérer les formations dans le LocalStorage
-  getTrainings() {
-    return this.getTrainings;
+  getItems() {
+    return this.items;
   }
   // Méthode qui va supprimser les formations du panier
   clearCart() {
-    this.training =[];
-    return this.training;
+    this.items =[];
+    return this.items;
   }
-  cart!: Map<number, Training>;
-  
+  cart!: Map<number, Training>; // Comment initialiser la map ?
+
   setTrainings() { 
   let cart = localStorage.getItem('cart');
   if(cart){  // le panier existe déjà

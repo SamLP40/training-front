@@ -20,7 +20,7 @@ export class TrainingsDetailsComponent implements OnInit {
     
   }
   addToCart(training: Training) {
-    this.cartService.addTraining(training);
+    this.cartService.addToCart(training);
     window.alert('Vous avez ajouté une formation au panier.')
 
   }

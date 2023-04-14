@@ -14,7 +14,7 @@ export class TrainingsComponent implements OnInit {
   constructor(private cartService : CartService, private router : Router) { }
 
   onAddCart(training:Training) {
-    this.cartService.addTraining(training);
+    this.cartService.addToCart(training);
     this.router.navigateByUrl('cart');
   }
 
@@ -28,6 +28,6 @@ export class TrainingsComponent implements OnInit {
   }
 
   onAddToCart(training:Training){
-this.cartService.addTraining(training);
+this.cartService.addToCart(training);
   }
 }
