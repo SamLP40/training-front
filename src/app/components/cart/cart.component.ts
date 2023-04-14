@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Training } from 'src/app/model/training.model';
 
 
@@ -7,7 +7,12 @@ import { Training } from 'src/app/model/training.model';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
+
+  ngOnInit() {
+
+    
+  }
   trainings: Training[] = [];
   
   addTraining(trainings: Training) {

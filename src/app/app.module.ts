@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TrainingsComponent } from './components/trainings/trainings.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SamuelComponent } from './components/samuel/samuel.component';
+import { TrainingsDetailsComponent } from './trainings-details/trainings-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrainingsComponent,
     CartComponent,
-    SamuelComponent
+    SamuelComponent,
+    TrainingsDetailsComponent
   ],
   imports: [
     BrowserModule,
