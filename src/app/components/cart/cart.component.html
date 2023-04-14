@@ -1,0 +1,22 @@
+<!-- Affichage du contenu du panier ici -->
+<div class="cart-container">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>ID</th> <th>NOM</th> <th>QUANTITE</th> <th>PRIX</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let trainings of trainings">
+            <td>{{trainings.id}}</td>
+            <td>{{trainings.name}}</td>
+            <td>{{trainings.quantity}}</td>
+            <td>{{trainings.price}}</td>
+            <td><input type="number" name="quantity" style="width: 60px" [(ngModel)]="trainings.quantity"></td>
+            <td><a class="btn btn-primary" (click)="addTraining(trainings)"></a></td>
+            
+        </tr>
+        </tbody>
+    </table>
+    <router-outlet></router-outlet>
+</div>
